@@ -15,12 +15,12 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //==========ここから追加==========
+
             $table->string('title');
             $table->text('body');
             $table->bigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            //==========ここまで追加==========
+
             $table->timestamps();
         });
     }
