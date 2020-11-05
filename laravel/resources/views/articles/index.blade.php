@@ -3,6 +3,7 @@
 @section('title', '記事一覧')
 
 @section('content')
+    @include('nav')
   <div class="container">
     @foreach($articles as $article)
 
@@ -29,6 +30,7 @@
         </div>
       </div>
     </div>
-    @endforeach {{--この行を追加--}}
+    @endforeach
+
   </div>
 @endsection
